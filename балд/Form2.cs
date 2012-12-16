@@ -31,5 +31,11 @@ namespace балд
                 q2 += rts.Length;
             }
         }
+        static void pastedm(ref string[][] A, DataGridView dtg)//Присвоение А элементов datagridview
+        {
+            for (int i = 0; i < A.Length; i++)
+                for (int j = 0; j < A[i].Length; j++)
+                    A[i][j] = dtg.Rows[i].Cells[j].Value as string;
+        }
     }
 }
